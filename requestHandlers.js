@@ -1,21 +1,19 @@
 var querystring = require("querystring");
     fs = require("fs");
-    // formidable = require("formidable");
 
 function start(response, postData) {
     console.log("Request handler 'start' was called.");
     
     var body = '<html>'+
     '<head>'+
-    '<meta http-equiv="Content-Type" content="text/html; '+
-    'charset=UTF-8" />'+
+    '<meta http-equiv="Content-Type" '+
+    'content="text/html; charset=UTF-8" />'+
     '</head>'+
     '<body>'+
     '<form action="/upload" enctype="multipart/form-data" '+
     'method="post">'+
-    '<input type="text" name="title"><br>'+
-    '<input type="file" name="upload" multiple="multiple"><br>'+
-    '<input type="submit" value="Upload">'+
+    '<input type="file" name="upload">'+
+    '<input type="submit" value="Upload file" />'+
     '</form>'+
     '</body>'+
     '</html>';
